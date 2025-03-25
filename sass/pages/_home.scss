@@ -114,7 +114,7 @@
     background-color: #060CE9;
 }
 
-#question-zoom-con, #daily-double-con {
+#question-zoom-con, #daily-double-con, #fj-con-con, #fj-question-con, #fj-category-con {
     position: absolute;
     top: 0;
     left: 0;
@@ -124,7 +124,7 @@
     display: none;
 }
 
-#big-question-text, #dd-text {
+#big-question-text, #dd-text, #fj-q-text, #fj-title, #fj-category-title {
     color: white;
     font-size: 60px;
     display: flex;
@@ -134,17 +134,23 @@
     text-align: center;
 }
 
-#daily-double-con {
+#fj-category-con {
+    z-index: 5;
+}
+
+#daily-double-con, #fj-con-con {
     z-index: 10;
 }
 
-#dd-con {
+#dd-con, #fj-title-con, #fj-question, #fj-category {
     width: 100%;
     background-color: #060CE9;
 }
 
-#dd-text {
-    color: gold;
+#dd-text, #fj-title, #fj-category-title {
+    &:not(#fj-category-title) {
+        color: gold;
+    }
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
@@ -153,4 +159,22 @@
     font-size: 40px;
     padding-top: 10px;
     cursor: pointer;
+}
+
+#fj-text {
+    background-color: #060CE9;
+    padding: 10px 0px 10px 0px;
+    border-radius: 50px;
+    border: 2px solid gold;
+    text-align: center;
+    color: gold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    transition: all ease-in-out 0.5s;
+    cursor: pointer;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    &:hover {
+        background-color: gold;
+        color: blue;
+    }
 }
